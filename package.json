@@ -1,11 +1,16 @@
 {
   "name": "kaspacom-wallet-messages",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch"
+  },
+  "files": ["dist"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KASPIANO/kaspacom-wallet-messages.git"
   },
   "devDependencies": {
     "typescript": "^5.7.2"
