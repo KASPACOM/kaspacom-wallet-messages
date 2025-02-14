@@ -3,5 +3,5 @@ export enum WalletMessageTypeEnum {
     WalletActionRequest = 'wallet-action-request',
     WalletActionResponse = 'wallet-action-response',
     OpenWalletInfo = 'open-wallet-info',
-    RejectOperation = 'reject-operation',
+    RejectWalletActionRequest = 'reject-wallet-action-request',
 }

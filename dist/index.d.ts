@@ -19,5 +19,5 @@ export * from './types/actions/results/payloads/sign-pskt-transaction-action-res
 export * from './types/protocol-script-data-and-address.interface';
 export * from './types/protocol-script.interface';
 export * from './types/pkst-actions-enum.interface';
-export * from './types/payloads/reject-operation-payload.interface';
+export * from './types/payloads/reject-wallet-action-request-payload.interface';
 //# sourceMappingURL=index.d.ts.map

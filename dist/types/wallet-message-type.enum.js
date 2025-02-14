@@ -4,5 +4,5 @@ export var WalletMessageTypeEnum;
     WalletMessageTypeEnum["WalletActionRequest"] = "wallet-action-request";
     WalletMessageTypeEnum["WalletActionResponse"] = "wallet-action-response";
     WalletMessageTypeEnum["OpenWalletInfo"] = "open-wallet-info";
-    WalletMessageTypeEnum["RejectOperation"] = "reject-operation";
+    WalletMessageTypeEnum["RejectWalletActionRequest"] = "reject-wallet-action-request";
 })(WalletMessageTypeEnum || (WalletMessageTypeEnum = {}));

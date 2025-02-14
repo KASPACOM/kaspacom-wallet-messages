@@ -1,6 +1,6 @@
 import { WalletActionRequestPayloadInterface } from './actions/requests/wallet-action-request-payload-interface';
 import { WalletActionResultPayloadInterface } from './actions/results/wallet-action-result-payload-interface';
-import { RejectOperationPayloadInterface } from './payloads/reject-operation-payload.interface';
+import { RejectWalletActionRequestPayloadInterface } from './payloads/reject-wallet-action-request-payload.interface';
 import { WalletInfoPayloadInterface } from './payloads/wallet-info-payload.interface';
 import { WalletMessageTypeEnum } from './wallet-message-type.enum';
 
@@ -17,5 +17,5 @@ interface WalletMessagePayloadMap {
   [WalletMessageTypeEnum.WalletActionRequest]: WalletActionRequestPayloadInterface;
   [WalletMessageTypeEnum.WalletActionResponse]: WalletActionResultPayloadInterface;
   [WalletMessageTypeEnum.OpenWalletInfo]: undefined;
-  [WalletMessageTypeEnum.RejectOperation]: RejectOperationPayloadInterface | undefined;
+  [WalletMessageTypeEnum.RejectWalletActionRequest]: RejectWalletActionRequestPayloadInterface | undefined;
 }
