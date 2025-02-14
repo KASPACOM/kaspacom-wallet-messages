@@ -1,3 +1,3 @@
 export interface RejectWalletActionRequestPayloadInterface {
-    operationUuid?: string;
+    actionUuid?: string;
 }
