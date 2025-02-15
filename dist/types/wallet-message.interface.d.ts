@@ -13,6 +13,7 @@ export type WalletMessageInterface = {
 interface WalletMessagePayloadMap {
     [WalletMessageTypeEnum.WalletInfo]: WalletInfoPayloadInterface | undefined;
     [WalletMessageTypeEnum.WalletActionRequest]: WalletActionRequestPayloadInterface;
+    [WalletMessageTypeEnum.WalletActionApproved]: WalletActionRequestPayloadInterface;
     [WalletMessageTypeEnum.WalletActionResponse]: WalletActionResultPayloadInterface;
     [WalletMessageTypeEnum.OpenWalletInfo]: undefined;
     [WalletMessageTypeEnum.RejectWalletActionRequest]: RejectWalletActionRequestPayloadInterface | undefined;
