@@ -4,4 +4,5 @@ export enum WalletActionResultType {
     CompoundUtxos = 'compound-utxos',
     SignPsktTransaction = 'sign-pskt-transaction',
     CommitReveal = 'commit-reveal',
+    ConnectApp = 'connect-app',
 }

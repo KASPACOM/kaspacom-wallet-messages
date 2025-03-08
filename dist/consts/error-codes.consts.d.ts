@@ -22,6 +22,7 @@ export declare const ERROR_CODES: {
         TOKEN_NAME_IS_NOT_AVAILABLE_TO_DEPLOY: number;
         INVALID_MESSAGE_TO_SIGN: number;
         INVALID_COMMIT_REVEAL_DATA: number;
+        FAILED_OPENING_WALLET: number;
     };
 };
 export declare const ERROR_CODES_MESSAGES: {

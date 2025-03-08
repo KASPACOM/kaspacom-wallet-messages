@@ -1,6 +1,7 @@
 import { ProtocolScriptDataAndAddress } from "../../protocol-script-data-and-address.interface";
 import { WalletActionTypeEnum } from "../requests/wallet-action-type.enum";
 import { CommitRevealActionResult } from "./payloads/commit-reveal-action-result.interface";
+import { ConnectAppActionResult } from "./payloads/connect-app-action-result.interface";
 import { KasTransferActionResult } from "./payloads/kas-transfer-action-result.interface";
 import { SignedMessageActionResult } from "./payloads/sign-message-action-result.interface";
 import { SignPsktTransactionActionResult } from "./payloads/sign-pskt-transaction-action-result.interface";
@@ -21,6 +22,7 @@ interface WalletActionResultDataMap {
     [WalletActionTypeEnum.KasTransfer]: KasTransferActionResult;
     [WalletActionTypeEnum.SignPsktTransaction]: SignPsktTransactionActionResult;
     [WalletActionTypeEnum.GetProtocolScriptData]: ProtocolScriptDataAndAddress;
+    [WalletActionTypeEnum.ConnectApp]: ConnectAppActionResult;
 }
 export {};
 //# sourceMappingURL=wallet-action-result-payload-interface.d.ts.map

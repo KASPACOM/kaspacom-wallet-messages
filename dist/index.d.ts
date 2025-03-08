@@ -3,6 +3,7 @@ export * from './types/wallet-message.interface';
 export * from './types/actions/requests/wallet-action-type.enum';
 export * from './types/actions/requests/payloads/sign-message-action.interface';
 export * from './consts/error-codes.consts';
+export * from './consts/enviroment-urls.enum';
 export * from './types/actions/requests/wallet-action-request-payload-interface';
 export * from './types/actions/results/wallet-action-result-payload-interface';
 export * from './types/actions/results/wallet-action-result.interface';
@@ -14,10 +15,15 @@ export * from './types/actions/requests/payloads/commit-reveal-action.interface'
 export * from './types/actions/results/payloads/commit-reveal-action-result.interface';
 export * from './types/actions/requests/payloads/kas-transfer-action.interface';
 export * from './types/actions/results/payloads/kas-transfer-action-result.interface';
+export * from './types/actions/requests/payloads/connect-app-action.interface';
+export * from './types/actions/results/payloads/connect-app-action-result.interface';
 export * from './types/actions/requests/payloads/sign-pskt-transaction-action.interface';
 export * from './types/actions/results/payloads/sign-pskt-transaction-action-result.interface';
 export * from './types/protocol-script-data-and-address.interface';
 export * from './types/protocol-script.interface';
 export * from './types/pkst-actions-enum.interface';
 export * from './types/payloads/reject-wallet-action-request-payload.interface';
+export * from './types/init-wallet-options.interface';
+export * from './types/event-handlers.interface';
+export * from './classes/kaspacom-web-wallet-messages-service';
 //# sourceMappingURL=index.d.ts.map

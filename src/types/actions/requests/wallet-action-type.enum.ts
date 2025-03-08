@@ -4,4 +4,5 @@ export enum WalletActionTypeEnum {
     KasTransfer = 'kas-transfer',
     SignPsktTransaction = 'sign-pskt-transaction',
     GetProtocolScriptData = 'get-protocol-script-data',
+    ConnectApp = 'connect-app',
 }

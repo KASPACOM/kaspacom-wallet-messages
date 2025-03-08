@@ -5,4 +5,5 @@ export var WalletActionResultType;
     WalletActionResultType["CompoundUtxos"] = "compound-utxos";
     WalletActionResultType["SignPsktTransaction"] = "sign-pskt-transaction";
     WalletActionResultType["CommitReveal"] = "commit-reveal";
+    WalletActionResultType["ConnectApp"] = "connect-app";
 })(WalletActionResultType || (WalletActionResultType = {}));

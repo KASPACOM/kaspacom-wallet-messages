@@ -3,6 +3,7 @@ export declare enum WalletActionResultType {
     MessageSigning = "message-signing",
     CompoundUtxos = "compound-utxos",
     SignPsktTransaction = "sign-pskt-transaction",
-    CommitReveal = "commit-reveal"
+    CommitReveal = "commit-reveal",
+    ConnectApp = "connect-app"
 }
 //# sourceMappingURL=wallet-action-result-type.enum.d.ts.map
