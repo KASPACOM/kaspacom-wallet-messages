@@ -4,6 +4,7 @@ import { TransferKasAction } from './payloads/kas-transfer-action.interface';
 import { WalletActionTypeEnum } from './wallet-action-type.enum';
 import { SignPsktTransactionActionInterface } from './payloads/sign-pskt-transaction-action.interface';
 import { ProtocolScript } from '../../protocol-script.interface';
+import { SignL2TransactionActionInterface } from './payloads/sign-l2-transaction-action.interface';
 export type WalletActionRequestPayloadInterface = {
     [K in keyof WalletActionsDataMap]: {
         action: K;
@@ -15,6 +16,7 @@ interface WalletActionsDataMap {
     [WalletActionTypeEnum.SignMessage]: SignMessageActionInterface;
     [WalletActionTypeEnum.KasTransfer]: TransferKasAction;
     [WalletActionTypeEnum.SignPsktTransaction]: SignPsktTransactionActionInterface;
+    [WalletActionTypeEnum.SignL2Transaction]: SignL2TransactionActionInterface;
     [WalletActionTypeEnum.GetProtocolScriptData]: ProtocolScript;
 }
 export {};

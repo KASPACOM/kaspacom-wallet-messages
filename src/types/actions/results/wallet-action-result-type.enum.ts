@@ -3,5 +3,6 @@ export enum WalletActionResultType {
     MessageSigning = 'message-signing',
     CompoundUtxos = 'compound-utxos',
     SignPsktTransaction = 'sign-pskt-transaction',
+    SignL2Transaction = 'sign-l2-transaction',
     CommitReveal = 'commit-reveal',
 }
