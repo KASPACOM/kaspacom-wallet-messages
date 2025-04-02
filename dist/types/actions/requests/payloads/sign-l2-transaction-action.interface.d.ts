@@ -1,5 +1,5 @@
 import { L2TransactionOptions } from "../../../l2-transaction-options.interface";
-export interface SignL2TransactionActionInterface {
+export interface SignL2EtherTransactionActionInterface {
     transactionOptions: L2TransactionOptions;
     submitTransaction?: boolean;
     payloadPrefix?: string;

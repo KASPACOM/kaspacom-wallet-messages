@@ -2,7 +2,7 @@ import { ProtocolScriptDataAndAddress } from "../../protocol-script-data-and-add
 import { WalletActionTypeEnum } from "../requests/wallet-action-type.enum";
 import { CommitRevealActionResult } from "./payloads/commit-reveal-action-result.interface";
 import { KasTransferActionResult } from "./payloads/kas-transfer-action-result.interface";
-import { SignL2TransactionActionResult } from "./payloads/sign-l2-transaction-action-result.interface";
+import { SignL2EtherTransactionActionResult } from "./payloads/sign-l2-transaction-action-result.interface";
 import { SignedMessageActionResult } from "./payloads/sign-message-action-result.interface";
 import { SignPsktTransactionActionResult } from "./payloads/sign-pskt-transaction-action-result.interface";
 export type WalletActionResultPayloadInterface = {
@@ -21,7 +21,7 @@ interface WalletActionResultDataMap {
     [WalletActionTypeEnum.CommitReveal]: CommitRevealActionResult;
     [WalletActionTypeEnum.KasTransfer]: KasTransferActionResult;
     [WalletActionTypeEnum.SignPsktTransaction]: SignPsktTransactionActionResult;
-    [WalletActionTypeEnum.SignL2Transaction]: SignL2TransactionActionResult;
+    [WalletActionTypeEnum.SignL2EtherTransaction]: SignL2EtherTransactionActionResult;
     [WalletActionTypeEnum.GetProtocolScriptData]: ProtocolScriptDataAndAddress;
 }
 export {};
