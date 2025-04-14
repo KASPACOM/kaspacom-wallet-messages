@@ -16,6 +16,8 @@ export * from './types/actions/requests/payloads/kas-transfer-action.interface';
 export * from './types/actions/results/payloads/kas-transfer-action-result.interface';
 export * from './types/actions/requests/payloads/sign-pskt-transaction-action.interface';
 export * from './types/actions/results/payloads/sign-pskt-transaction-action-result.interface';
+export * from './types/actions/requests/payloads/sign-l2-transaction-action.interface';
+export * from './types/actions/results/payloads/sign-l2-transaction-action-result.interface';
 export * from './types/protocol-script-data-and-address.interface';
 export * from './types/protocol-script.interface';
 export * from './types/pkst-actions-enum.interface';
