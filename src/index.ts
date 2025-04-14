@@ -20,5 +20,6 @@ export * from './types/actions/requests/payloads/sign-l2-transaction-action.inte
 export * from './types/actions/results/payloads/sign-l2-transaction-action-result.interface';
 export * from './types/protocol-script-data-and-address.interface';
 export * from './types/protocol-script.interface';
+export * from './types/protocol-type.enum';
 export * from './types/pkst-actions-enum.interface';
 export * from './types/payloads/reject-wallet-action-request-payload.interface';
