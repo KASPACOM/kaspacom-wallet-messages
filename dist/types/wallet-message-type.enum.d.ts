@@ -1,5 +1,6 @@
 export declare enum WalletMessageTypeEnum {
     WalletInfo = "wallet-info",
+    EIP1193Event = "eip-1193-event",
     WalletActionRequest = "wallet-action-request",
     WalletActionApproved = "wallet-action-approved",
     WalletActionResponse = "wallet-action-response",

@@ -1,0 +1,26 @@
+export var EIP1193RequestType;
+(function (EIP1193RequestType) {
+    EIP1193RequestType["REQUEST_ACCOUNTS"] = "eth_requestAccounts";
+    EIP1193RequestType["GET_BALANCE"] = "eth_getBalance";
+    EIP1193RequestType["SIGN"] = "eth_sign";
+    EIP1193RequestType["SEND_TRANSACTION"] = "eth_sendTransaction";
+    EIP1193RequestType["GET_CHAIN_ID"] = "eth_chainId";
+    EIP1193RequestType["GET_NETWORK_VERSION"] = "net_version";
+    EIP1193RequestType["GET_GAS_PRICE"] = "eth_gasPrice";
+    EIP1193RequestType["GET_ACCOUNTS"] = "eth_accounts";
+    EIP1193RequestType["GET_BLOCK_NUMBER"] = "eth_blockNumber";
+    EIP1193RequestType["GET_CODE"] = "eth_getCode";
+    EIP1193RequestType["GET_ESTIMATE_GAS"] = "eth_estimateGas";
+    EIP1193RequestType["GET_TRANSACTION_COUNT"] = "eth_getTransactionCount";
+    EIP1193RequestType["GET_TRANSACTION_RECEIPT"] = "eth_getTransactionReceipt";
+    EIP1193RequestType["GET_TRANSACTION_BY_HASH"] = "eth_getTransactionByHash";
+    EIP1193RequestType["GET_BLOCK_BY_NUMBER"] = "eth_getBlockByNumber";
+    EIP1193RequestType["GET_BLOCK_BY_HASH"] = "eth_getBlockByHash";
+    EIP1193RequestType["GET_LOGS"] = "eth_getLogs";
+    EIP1193RequestType["PERSONAL_SIGN"] = "personal_sign";
+    EIP1193RequestType["SIGN_TYPED_DATA"] = "eth_signTypedData";
+    EIP1193RequestType["SIGN_TYPED_DATA_V4"] = "eth_signTypedData_v4";
+    EIP1193RequestType["WALLET_ADD_ETHEREUM_CHAIN"] = "wallet_addEthereumChain";
+    EIP1193RequestType["WALLET_SWITCH_ETHEREUM_CHAIN"] = "wallet_switchEthereumChain";
+    EIP1193RequestType["WALLET_WATCH_ASSET"] = "wallet_watchAsset";
+})(EIP1193RequestType || (EIP1193RequestType = {}));
