@@ -6,4 +6,5 @@ export var WalletActionResultType;
     WalletActionResultType["SignPsktTransaction"] = "sign-pskt-transaction";
     WalletActionResultType["SignL2EtherTransaction"] = "sign-l2-ether-transaction";
     WalletActionResultType["CommitReveal"] = "commit-reveal";
+    WalletActionResultType["EIP1193ProviderRequest"] = "eip-1193-provider-request";
 })(WalletActionResultType || (WalletActionResultType = {}));

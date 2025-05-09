@@ -5,4 +5,5 @@ export enum WalletActionResultType {
     SignPsktTransaction = 'sign-pskt-transaction',
     SignL2EtherTransaction = 'sign-l2-ether-transaction',
     CommitReveal = 'commit-reveal',
+    EIP1193ProviderRequest = 'eip-1193-provider-request',
 }

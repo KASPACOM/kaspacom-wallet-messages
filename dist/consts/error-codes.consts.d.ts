@@ -23,6 +23,17 @@ export declare const ERROR_CODES: {
         INVALID_MESSAGE_TO_SIGN: number;
         INVALID_COMMIT_REVEAL_DATA: number;
     };
+    EIP1193: {
+        USER_REJECTED: number;
+        UNAUTHORIZED: number;
+        UNSUPPORTED_METHOD: number;
+        DISCONNECTED: number;
+        CHAIN_DISCONNECTED: number;
+        CHAIN_NOT_ADDED: number;
+        INVALID_PARAMETERS: number;
+        METHOD_NOT_FOUND: number;
+        INTERNAL_ERROR: number;
+    };
 };
 export declare const ERROR_CODES_MESSAGES: {
     [x: number]: string;

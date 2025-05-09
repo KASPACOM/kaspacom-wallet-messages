@@ -18,8 +18,12 @@ export * from './types/actions/requests/payloads/sign-pskt-transaction-action.in
 export * from './types/actions/results/payloads/sign-pskt-transaction-action-result.interface';
 export * from './types/actions/requests/payloads/sign-l2-transaction-action.interface';
 export * from './types/actions/results/payloads/sign-l2-transaction-action-result.interface';
+export * from './types/actions/results/payloads/eip1193-provider-request-action-result.interface';
 export * from './types/protocol-script-data-and-address.interface';
 export * from './types/protocol-script.interface';
 export * from './types/protocol-type.enum';
 export * from './types/pkst-actions-enum.interface';
 export * from './types/payloads/reject-wallet-action-request-payload.interface';
+export * from './services/kaspa-com-web-wallet-messages.service';
+export * from './services/kaspa-com-web-wallet-eip1193.provider';
+export * from './types/eip1193';
