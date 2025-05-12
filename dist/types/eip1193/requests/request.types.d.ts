@@ -24,7 +24,7 @@ export declare enum EIP1193RequestType {
     WALLET_SWITCH_ETHEREUM_CHAIN = "wallet_switchEthereumChain",
     WALLET_WATCH_ASSET = "wallet_watchAsset"
 }
-interface EthTransactionParams {
+export interface EthTransactionParams {
     from: string;
     to: string;
     value: string;
@@ -33,8 +33,8 @@ interface EthTransactionParams {
     gasPrice?: string;
     nonce?: string;
 }
-interface KasTransactionParams {
-    outputs: {
+export interface KasTransactionParams {
+    outputs?: {
         address: string;
         amount: string;
     }[];
@@ -44,7 +44,7 @@ export interface EIP1193RequestParams {
     [EIP1193RequestType.GET_BALANCE]: [string, string];
     [EIP1193RequestType.SIGN]: [string, string];
     [EIP1193RequestType.SEND_TRANSACTION]: [EthTransactionParams];
-    [EIP1193RequestType.KAS_SEND_TRANSACTION]: [EthTransactionParams, KasTransactionParams];
+    [EIP1193RequestType.KAS_SEND_TRANSACTION]: [EthTransactionParams, KasTransactionParams?];
     [EIP1193RequestType.GET_CHAIN_ID]: [];
     [EIP1193RequestType.GET_NETWORK_VERSION]: [];
     [EIP1193RequestType.GET_GAS_PRICE]: [];
@@ -108,5 +108,4 @@ export interface EIP1193RequestPayload<T extends EIP1193RequestType> {
     method: T;
     params: EIP1193RequestParams[T];
 }
-export {};
 //# sourceMappingURL=request.types.d.ts.map
