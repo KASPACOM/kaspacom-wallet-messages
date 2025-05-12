@@ -312,7 +312,7 @@ export class KaspaComWebWalletMessagesService {
         const value = this.messagesWaitingToBeResolved[key];
         value.resolve({
           success: false,
-          errorCode: ERROR_CODES.WALLET_ACTION.USER_REJECTED,
+          errorCode: ERROR_CODES.EIP1193.USER_REJECTED,
           action: value.action.action,
         });
         delete this.messagesWaitingToBeResolved[key];

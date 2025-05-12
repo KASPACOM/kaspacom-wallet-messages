@@ -4,6 +4,7 @@ export var EIP1193RequestType;
     EIP1193RequestType["GET_BALANCE"] = "eth_getBalance";
     EIP1193RequestType["SIGN"] = "eth_sign";
     EIP1193RequestType["SEND_TRANSACTION"] = "eth_sendTransaction";
+    EIP1193RequestType["KAS_SEND_TRANSACTION"] = "kas_sendTransaction";
     EIP1193RequestType["GET_CHAIN_ID"] = "eth_chainId";
     EIP1193RequestType["GET_NETWORK_VERSION"] = "net_version";
     EIP1193RequestType["GET_GAS_PRICE"] = "eth_gasPrice";
