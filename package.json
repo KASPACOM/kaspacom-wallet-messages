@@ -1,6 +1,6 @@
 {
   "name": "kaspacom-wallet-messages",
-  "version": "1.0.12",
+  "version": "1.0.19",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {

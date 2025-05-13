@@ -3,6 +3,7 @@ export enum EIP1193RequestType {
   GET_BALANCE = 'eth_getBalance',
   SIGN = 'eth_sign',
   SEND_TRANSACTION = 'eth_sendTransaction',
+  KAS_SEND_TRANSACTION = 'kas_sendTransaction',
   GET_CHAIN_ID = 'eth_chainId',
   GET_NETWORK_VERSION = 'net_version',
   GET_GAS_PRICE = 'eth_gasPrice',
@@ -24,19 +25,29 @@ export enum EIP1193RequestType {
   WALLET_WATCH_ASSET = 'wallet_watchAsset'
 }
 
+export interface EthTransactionParams {
+  from: string;
+  to: string;
+  value: bigint;
+  data?: string;
+  gas?: string;
+  gasPrice?: string;
+  nonce?: string;
+}
+
+export interface KasTransactionParams {
+  outputs?: {
+    address: string;
+    amount: bigint;
+  }[];
+}
+
 export interface EIP1193RequestParams {
   [EIP1193RequestType.REQUEST_ACCOUNTS]: [];
   [EIP1193RequestType.GET_BALANCE]: [string, string]; // [address, blockNumber]
   [EIP1193RequestType.SIGN]: [string, string]; // [address, message]
-  [EIP1193RequestType.SEND_TRANSACTION]: [{
-    from: string;
-    to: string;
-    value: string;
-    data?: string;
-    gas?: string;
-    gasPrice?: string;
-    nonce?: string;
-  }];
+  [EIP1193RequestType.SEND_TRANSACTION]: [EthTransactionParams];
+  [EIP1193RequestType.KAS_SEND_TRANSACTION]: [EthTransactionParams, KasTransactionParams?];
   [EIP1193RequestType.GET_CHAIN_ID]: [];
   [EIP1193RequestType.GET_NETWORK_VERSION]: [];
   [EIP1193RequestType.GET_GAS_PRICE]: [];

@@ -8,7 +8,6 @@ export declare const ERROR_CODES: {
         INVALID_AMOUNT: number;
         INVALID_ADDRESS: number;
         INSUFFICIENT_BALANCE: number;
-        USER_REJECTED: number;
         TICKER_NOT_FOUND: number;
         TOKEN_NOT_IN_MINTABLE_STATE: number;
         NO_UTXOS_TO_COMPOUND: number;

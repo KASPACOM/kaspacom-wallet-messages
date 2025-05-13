@@ -4,6 +4,10 @@ export interface EIP1193RequestResults {
     [EIP1193RequestType.GET_BALANCE]: string;
     [EIP1193RequestType.SIGN]: string;
     [EIP1193RequestType.SEND_TRANSACTION]: string;
+    [EIP1193RequestType.KAS_SEND_TRANSACTION]: {
+        kaspatransactionId: string;
+        ethTransactionHash: string;
+    };
     [EIP1193RequestType.GET_CHAIN_ID]: string;
     [EIP1193RequestType.GET_NETWORK_VERSION]: string;
     [EIP1193RequestType.GET_GAS_PRICE]: string;
