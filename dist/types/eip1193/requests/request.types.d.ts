@@ -27,7 +27,7 @@ export declare enum EIP1193RequestType {
 export interface EthTransactionParams {
     from: string;
     to: string;
-    value: string;
+    value: bigint;
     data?: string;
     gas?: string;
     gasPrice?: string;
@@ -36,7 +36,7 @@ export interface EthTransactionParams {
 export interface KasTransactionParams {
     outputs?: {
         address: string;
-        amount: string;
+        amount: bigint;
     }[];
 }
 export interface EIP1193RequestParams {
