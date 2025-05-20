@@ -5,6 +5,24 @@ import { EIP1193ProviderInterface, EIP1193RequestPayload, EIP1193RequestResults,
 import { KaspaComWebWalletMessagesService } from "./kaspa-com-web-wallet-messages.service";
 export class KaspaComWebWalletEip1193Provider implements EIP1193ProviderInterface {
 
+    protected actionsThatNotRequireUserApproval: EIP1193RequestType[] = [
+        EIP1193RequestType.GET_ACCOUNTS,
+        EIP1193RequestType.GET_BALANCE,
+        EIP1193RequestType.GET_CHAIN_ID,
+        EIP1193RequestType.GET_BLOCK_BY_HASH,
+        EIP1193RequestType.GET_BLOCK_BY_NUMBER,
+        EIP1193RequestType.GET_CODE,
+        EIP1193RequestType.GET_ESTIMATE_GAS,
+        EIP1193RequestType.GET_GAS_PRICE,
+        EIP1193RequestType.GET_LOGS,
+        EIP1193RequestType.GET_NETWORK_VERSION,
+        EIP1193RequestType.GET_TRANSACTION_BY_HASH,
+        EIP1193RequestType.GET_TRANSACTION_COUNT,
+        EIP1193RequestType.GET_TRANSACTION_RECEIPT,
+    ];
+
+    protected actionsThatNotRequireUserApprovalByAction: {[method: string]: boolean} = {};
+
     protected eventListeners: {
         [key: string]: ((...args: any[]) => void)[];
     } = {};
@@ -15,16 +33,30 @@ export class KaspaComWebWalletEip1193Provider implements EIP1193ProviderInterfac
                 this.eventListeners[event.type]?.forEach(listener => listener(event.data));
             },
         });
+        this.actionsThatNotRequireUserApprovalByAction = Object.fromEntries(
+            this.actionsThatNotRequireUserApproval.map(action => [action, true])
+        );
+    }
+
+    protected isActionReuqireUserApproval<T extends EIP1193RequestType>(args: EIP1193RequestPayload<T>): boolean {
+        return !this.actionsThatNotRequireUserApprovalByAction[args.method];
     }
 
     async request<T extends EIP1193RequestType>(args: EIP1193RequestPayload<T>): Promise<EIP1193RequestResults[T]> {
-        await this.openWallet();
+        const isActionReuqireUserApproval = this.isActionReuqireUserApproval(args);
+
+        if (isActionReuqireUserApproval) {
+            await this.openWallet();
+        }
+
         const result = await this.kaspaComWalletMessages.sendWalletActionAndWaitForResponse({
             action: WalletActionTypeEnum.EIP1193ProviderRequest,
             data: args,
         });
 
-        await this.closeWallet();
+        if (isActionReuqireUserApproval) {
+            await this.closeWallet();
+        }
 
         if (!result.success) {
             throw {
