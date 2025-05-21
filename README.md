@@ -16,6 +16,6 @@ TypeScript types for interacting with the [Kaspa Com Wallet](https://wallet.kasp
 ## 📦 Installation
 
 ```bash
-npm install kaspacom-wallet-messages
+npm install @kaspacom/wallet-messages
 # or
-yarn add kaspacom-wallet-messages
+yarn add @kaspacom/wallet-messages
