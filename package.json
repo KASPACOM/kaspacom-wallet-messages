@@ -16,5 +16,19 @@
   },
   "devDependencies": {
     "typescript": "^5.7.2"
-  }
+  },
+  "keywords": [
+    "typescript",
+    "types",
+    "kaspa",
+    "wallet",
+    "kaspa-wallet",
+    "kaspa-com",
+    "blockchain",
+    "crypto",
+    "web3",
+    "api"
+  ],
+  "author": "KaspaCom",
+  "license": "MIT"
 }
