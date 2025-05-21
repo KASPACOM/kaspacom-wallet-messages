@@ -1,4 +1,4 @@
-# kaspacom-wallet-messages
+# @kaspacom/wallet-messages
 
 TypeScript types for interacting with the [Kaspa Com Wallet](https://wallet.kaspa.com). This package provides message definitions and type-safe interfaces to streamline communication between dApps and the Kaspa Com browser wallet.
 
