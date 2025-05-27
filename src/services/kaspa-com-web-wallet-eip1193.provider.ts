@@ -65,7 +65,7 @@ export class KaspaComWebWalletEip1193Provider implements EIP1193ProviderInterfac
             };
         }
 
-        const ethResult = (result.data as EIP1193ProviderRequestActionResult<T>).result;
+        const ethResult = (result.data as EIP1193ProviderRequestActionResult<T>).eip1193Response;
 
         if (ethResult.error) {
             throw ethResult.error;

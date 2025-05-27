@@ -50,7 +50,7 @@ export class KaspaComWebWalletEip1193Provider {
                 code: ERROR_CODES.EIP1193.INTERNAL_ERROR,
             };
         }
-        const ethResult = result.data.result;
+        const ethResult = result.data.eip1193Response;
         if (ethResult.error) {
             throw ethResult.error;
         }
