@@ -29,8 +29,10 @@ export interface EthTransactionParams {
     to: string;
     value: bigint;
     data?: string;
-    gas?: string;
+    gasLimit?: string;
     gasPrice?: string;
+    maxPriorityFeePerGas?: string;
+    maxFeePerGas?: string;
     nonce?: string;
 }
 export interface KasTransactionParams {
