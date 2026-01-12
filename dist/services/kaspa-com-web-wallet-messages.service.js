@@ -86,7 +86,7 @@ export class KaspaComWebWalletMessagesService {
         }
     }
     async onMessage(event) {
-        if (event.origin === this.walletUrl &&
+        if (new URL(event.origin).origin === new URL(this.walletUrl).origin &&
             event.data &&
             event.data?.type) {
             const eventData = event.data;
