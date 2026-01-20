@@ -14,6 +14,7 @@ export var EIP1193RequestType;
     EIP1193RequestType["GET_ESTIMATE_GAS"] = "eth_estimateGas";
     EIP1193RequestType["GET_TRANSACTION_COUNT"] = "eth_getTransactionCount";
     EIP1193RequestType["GET_TRANSACTION_RECEIPT"] = "eth_getTransactionReceipt";
+    EIP1193RequestType["ETH_CALL"] = "eth_call";
     EIP1193RequestType["GET_TRANSACTION_BY_HASH"] = "eth_getTransactionByHash";
     EIP1193RequestType["GET_BLOCK_BY_NUMBER"] = "eth_getBlockByNumber";
     EIP1193RequestType["GET_BLOCK_BY_HASH"] = "eth_getBlockByHash";

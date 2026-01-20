@@ -13,6 +13,7 @@ export enum EIP1193RequestType {
   GET_ESTIMATE_GAS = 'eth_estimateGas',
   GET_TRANSACTION_COUNT = 'eth_getTransactionCount',
   GET_TRANSACTION_RECEIPT = 'eth_getTransactionReceipt',
+  ETH_CALL = 'eth_call',
   GET_TRANSACTION_BY_HASH = 'eth_getTransactionByHash',
   GET_BLOCK_BY_NUMBER = 'eth_getBlockByNumber',
   GET_BLOCK_BY_HASH = 'eth_getBlockByHash',
@@ -64,6 +65,7 @@ export interface EIP1193RequestParams {
   }];
   [EIP1193RequestType.GET_TRANSACTION_COUNT]: [string, string]; // [address, blockNumber]
   [EIP1193RequestType.GET_TRANSACTION_RECEIPT]: [string]; // [transactionHash]
+  [EIP1193RequestType.ETH_CALL]: [string, string | undefined];
   [EIP1193RequestType.GET_TRANSACTION_BY_HASH]: [string]; // [transactionHash]
   [EIP1193RequestType.GET_BLOCK_BY_NUMBER]: [string, boolean]; // [blockNumber, includeTransactions]
   [EIP1193RequestType.GET_BLOCK_BY_HASH]: [string, boolean]; // [blockHash, includeTransactions]

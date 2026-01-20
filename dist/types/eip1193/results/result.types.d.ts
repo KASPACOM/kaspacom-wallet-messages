@@ -37,6 +37,7 @@ export interface EIP1193RequestResults {
         }>;
         status: string;
     } | null;
+    [EIP1193RequestType.ETH_CALL]: string;
     [EIP1193RequestType.GET_TRANSACTION_BY_HASH]: {
         hash: string;
         nonce: string;
