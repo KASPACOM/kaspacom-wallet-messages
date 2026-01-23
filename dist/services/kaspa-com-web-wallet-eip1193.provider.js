@@ -13,6 +13,7 @@ export class KaspaComWebWalletEip1193Provider {
         EIP1193RequestType.GET_ESTIMATE_GAS,
         EIP1193RequestType.GET_GAS_PRICE,
         EIP1193RequestType.GET_LOGS,
+        EIP1193RequestType.ETH_CALL,
         EIP1193RequestType.GET_NETWORK_VERSION,
         EIP1193RequestType.GET_TRANSACTION_BY_HASH,
         EIP1193RequestType.GET_TRANSACTION_COUNT,
