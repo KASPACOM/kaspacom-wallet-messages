@@ -35,6 +35,7 @@ export interface EIP1193ProviderChain {
   };
   rpcUrls: string[];
   blockExplorerUrls?: string[];
+  defiApiNetworkName?: string;
 }
 
 export interface EIP1193ProviderResponse<T extends EIP1193RequestType> {
