@@ -28,7 +28,7 @@ export class KaspaComWebWalletEip1193Provider implements EIP1193ProviderInterfac
         [key: string]: ((...args: any[]) => void)[];
     } = {};
 
-    constructor(protected kaspaComWalletMessages: KaspaComWebWalletMessagesService) {
+    constructor(protected kaspaComWalletMessages: KaspaComWebWalletMessagesService, protected displayIframeApproval: boolean = false) {
         this.kaspaComWalletMessages.addEventHandlers({
             onEip1193Event: (event) => {
                 this.eventListeners[event.type]?.forEach(listener => listener(event.data));
@@ -53,6 +53,7 @@ export class KaspaComWebWalletEip1193Provider implements EIP1193ProviderInterfac
         const result = await this.kaspaComWalletMessages.sendWalletActionAndWaitForResponse({
             action: WalletActionTypeEnum.EIP1193ProviderRequest,
             data: args,
+            displayIframeApproval: this.displayIframeApproval,
         });
 
         if (isActionReuqireUserApproval) {

@@ -3,6 +3,7 @@ import { WalletActionTypeEnum } from "../types/actions/requests/wallet-action-ty
 import { EIP1193RequestType } from "../types/eip1193";
 export class KaspaComWebWalletEip1193Provider {
     kaspaComWalletMessages;
+    displayIframeApproval;
     actionsThatNotRequireUserApproval = [
         EIP1193RequestType.GET_ACCOUNTS,
         EIP1193RequestType.GET_BALANCE,
@@ -21,8 +22,9 @@ export class KaspaComWebWalletEip1193Provider {
     ];
     actionsThatNotRequireUserApprovalByAction = {};
     eventListeners = {};
-    constructor(kaspaComWalletMessages) {
+    constructor(kaspaComWalletMessages, displayIframeApproval = false) {
         this.kaspaComWalletMessages = kaspaComWalletMessages;
+        this.displayIframeApproval = displayIframeApproval;
         this.kaspaComWalletMessages.addEventHandlers({
             onEip1193Event: (event) => {
                 this.eventListeners[event.type]?.forEach(listener => listener(event.data));
@@ -41,6 +43,7 @@ export class KaspaComWebWalletEip1193Provider {
         const result = await this.kaspaComWalletMessages.sendWalletActionAndWaitForResponse({
             action: WalletActionTypeEnum.EIP1193ProviderRequest,
             data: args,
+            displayIframeApproval: this.displayIframeApproval,
         });
         if (isActionReuqireUserApproval) {
             await this.closeWallet();
