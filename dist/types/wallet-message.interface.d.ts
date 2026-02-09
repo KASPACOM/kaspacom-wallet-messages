@@ -9,6 +9,7 @@ export type WalletMessageInterface = {
         type: K;
         payload: WalletMessagePayloadMap[K];
         uuid?: string;
+        displayIframeApproval?: boolean;
     };
 }[keyof WalletMessagePayloadMap];
 interface WalletMessagePayloadMap {
