@@ -9,6 +9,7 @@ export type WalletActionRequestPayloadInterface = {
     [K in keyof WalletActionsDataMap]: {
         action: K;
         data: WalletActionsDataMap[K];
+        displayIframeApproval?: boolean;
     };
 }[keyof WalletActionsDataMap];
 interface WalletActionsDataMap {
