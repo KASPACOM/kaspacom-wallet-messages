@@ -4,6 +4,8 @@ export var WalletActionTypeEnum;
     WalletActionTypeEnum["CommitReveal"] = "commit-reveal";
     WalletActionTypeEnum["KasTransfer"] = "kas-transfer";
     WalletActionTypeEnum["SignPsktTransaction"] = "sign-pskt-transaction";
+    WalletActionTypeEnum["CovenantDeploy"] = "deploy-covenant";
+    WalletActionTypeEnum["CovenantSpend"] = "spend-covenant";
     WalletActionTypeEnum["GetProtocolScriptData"] = "get-protocol-script-data";
     WalletActionTypeEnum["EIP1193ProviderRequest"] = "eip-1193-provider-request";
 })(WalletActionTypeEnum || (WalletActionTypeEnum = {}));
