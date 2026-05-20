@@ -6,7 +6,7 @@ import { SignedMessageActionResult } from "./payloads/sign-message-action-result
 import { SignPsktTransactionActionResult } from "./payloads/sign-pskt-transaction-action-result.interface";
 import { EIP1193ProviderRequestActionResult } from "./payloads/eip1193-provider-request-action-result.interface";
 import { EIP1193RequestType } from "../../eip1193/requests/request.types";
-import { CovenantDeployActionResult, CovenantSpendActionResult } from "./payloads/covenant-action-result.interface";
+import { CovenantCompletePartialActionResult, CovenantDeployActionResult, CovenantSpendActionResult } from "./payloads/covenant-action-result.interface";
 export type WalletActionResultPayloadInterface = {
     [K in keyof WalletActionResultDataMap]: {
         action: K;
@@ -25,6 +25,7 @@ interface WalletActionResultDataMap {
     [WalletActionTypeEnum.SignPsktTransaction]: SignPsktTransactionActionResult;
     [WalletActionTypeEnum.CovenantDeploy]: CovenantDeployActionResult;
     [WalletActionTypeEnum.CovenantSpend]: CovenantSpendActionResult;
+    [WalletActionTypeEnum.CovenantCompletePartial]: CovenantCompletePartialActionResult;
     [WalletActionTypeEnum.GetProtocolScriptData]: ProtocolScriptDataAndAddress;
     [WalletActionTypeEnum.EIP1193ProviderRequest]: EIP1193ProviderRequestActionResult<EIP1193RequestType>;
 }

@@ -6,6 +6,7 @@ export var WalletActionTypeEnum;
     WalletActionTypeEnum["SignPsktTransaction"] = "sign-pskt-transaction";
     WalletActionTypeEnum["CovenantDeploy"] = "deploy-covenant";
     WalletActionTypeEnum["CovenantSpend"] = "spend-covenant";
+    WalletActionTypeEnum["CovenantCompletePartial"] = "complete-covenant-partial";
     WalletActionTypeEnum["GetProtocolScriptData"] = "get-protocol-script-data";
     WalletActionTypeEnum["EIP1193ProviderRequest"] = "eip-1193-provider-request";
 })(WalletActionTypeEnum || (WalletActionTypeEnum = {}));

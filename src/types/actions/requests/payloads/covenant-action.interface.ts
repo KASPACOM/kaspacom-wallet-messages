@@ -24,3 +24,8 @@ export interface CovenantSpendActionInterface {
   priorityFeeSompi?: string;
   useSenderFee?: boolean;
 }
+
+export interface CovenantCompletePartialActionInterface {
+  partialSpendJson: string;
+  contractName?: string;
+}

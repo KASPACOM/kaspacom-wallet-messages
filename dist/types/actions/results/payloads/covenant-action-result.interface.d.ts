@@ -14,4 +14,9 @@ export interface CovenantSpendActionResult extends WalletActionResult {
     functionName: string;
     covenantId?: string;
 }
+export interface CovenantCompletePartialActionResult extends WalletActionResult {
+    type: WalletActionResultType.CovenantCompletePartial;
+    txid: string;
+    functionName: string;
+}
 //# sourceMappingURL=covenant-action-result.interface.d.ts.map
